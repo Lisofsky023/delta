@@ -1,8 +1,8 @@
 import React from "react";
 import TableCell from "./TableCell";
 
-const TableRow = ({ row, rowIndex }) => (
-  <tr key={rowIndex} {...row.getRowProps()}>
+const TableRow = ({ row, rowIndex, onRowClick }) => (
+  <tr key={rowIndex} onClick={() => onRowClick(row)} {...row.getRowProps()}>
     {row.cells.map((cell) => (
       <TableCell key={cell.column.id} cell={cell} />
     ))}
