@@ -1,0 +1,72 @@
+[
+  {
+    "index":"Выручка, руб",
+    "This_day":"500 521",
+    "yesterday":"480 521",
+    "yesterday_percent": 4,
+    "this_day_of_the_week":"4 805 121"
+  },
+{
+  "index":"Наличные",
+  "This_day":"300 000",
+  "yesterday":"300 000",
+  "yesterday_percent": 0,
+  "this_day_of_the_week":"300 000"
+},
+{
+  "index":"Безналичный расчет",
+  "This_day":"100 000",
+  "yesterday":"100 000",
+  "yesterday_percent": 0,
+  "this_day_of_the_week":"100 000"
+},
+{
+  "index":"Кредитные карты",
+  "This_day":"100 521",
+  "yesterday":"100 521",
+  "yesterday_percent": 0,
+  "this_day_of_the_week":"100 521"
+},
+{
+  "index":"Средний чек, руб",
+  "This_day":"1300",
+  "yesterday":"900",
+  "yesterday_percent": 44,
+  "this_day_of_the_week":"900"
+},
+{
+  "index":"Средний гость, руб",
+  "This_day":"1200",
+  "yesterday":"800",
+  "yesterday_percent": 50,
+  "this_day_of_the_week":"800"
+},
+{
+  "index":"Удаления из чека (после оплаты), руб",
+  "This_day":"1000",
+  "yesterday":"1200",
+  "yesterday_percent": -9,
+  "this_day_of_the_week":"900"
+},
+{
+  "index":"Удаления из чека (до оплаты), руб",
+  "This_day":"1300",
+  "yesterday":"1300",
+  "yesterday_percent": 0,
+  "this_day_of_the_week":"900"
+},
+{
+  "index":"Количество чеков",
+  "This_day":"34",
+  "yesterday":"36",
+  "yesterday_percent": -6,
+  "this_day_of_the_week":"34"
+},
+{
+  "index":"Количество гостей",
+  "This_day":"34",
+  "yesterday":"36",
+  "yesterday_percent": -6,
+  "this_day_of_the_week":"32"
+}
+]
