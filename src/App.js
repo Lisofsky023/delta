@@ -1,6 +1,6 @@
 import "./App.css";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useTable } from "react-table";
 
 import Table from "./components/Table";
@@ -19,19 +19,26 @@ function App() {
     setSelectedRowIndex(rowIndex);
   };
 
-  const handleClickOutside = (event) => {
-    if (!event.target.closest('.clickable-row')) {
-      setSelectedRowData(null);
-      setSelectedRowIndex(null);
-    }
-  };
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (!event.target.closest('.clickable-row')) {
+        setSelectedRowData(null);
+        setSelectedRowIndex(null);
+      }
+    };
 
-  React.useEffect(() => {
     document.addEventListener('click', handleClickOutside, true);
     return () => {
       document.removeEventListener('click', handleClickOutside, true);
     };
   }, []);
+
+  // React.useEffect(() => {
+  //   document.addEventListener('click', handleClickOutside, true);
+  //   return () => {
+  //     document.removeEventListener('click', handleClickOutside, true);
+  //   };
+  // }, []);
 
   const { getTableProps, headerGroups, rows, prepareRow } = useTable({
     columns,

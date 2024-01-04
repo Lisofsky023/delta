@@ -21,7 +21,10 @@ const Chart = ({ chartData }) => {
     series: [{
       name: 'Row Data',
       data: chartData
-    }]
+    },],
+    accessibility: {
+      enabled: false
+    }
   };
 
   return <HighchartsReact highcharts={Highcharts} options={options} />;

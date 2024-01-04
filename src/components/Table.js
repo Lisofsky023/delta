@@ -15,7 +15,7 @@ const Table = ({ headerGroups, rows, prepareRow, onRowClick, selectedRowIndex, c
         prepareRow(row);
         const isRowSelected = selectedRowIndex === rowIndex;
         return (
-          <>
+          <React.Fragment key={rowIndex}>
             <TableRow 
               key={rowIndex} 
               row={row}  
@@ -29,7 +29,7 @@ const Table = ({ headerGroups, rows, prepareRow, onRowClick, selectedRowIndex, c
                 </td>
               </tr>
             )}
-          </>
+          </React.Fragment>
         );
       })}
     </tbody>
