@@ -1,8 +1,9 @@
 import React from "react";
 import TableHeader from "./TableHeader";
 import TableRow from "./TableRow";
+import Chart from "../highcharts/Chart";
 
-const Table = ({ headerGroups, rows, prepareRow, onRowClick }) => (
+const Table = ({ headerGroups, rows, prepareRow, onRowClick, selectedRowIndex, chartData }) => (
   <table>
     <thead>
       {headerGroups.map((headerGroup, index) => (
@@ -12,11 +13,24 @@ const Table = ({ headerGroups, rows, prepareRow, onRowClick }) => (
     <tbody>
       {rows.map((row, rowIndex) => {
         prepareRow(row);
-        return <TableRow 
-        key={rowIndex} 
-        row={row}  
-        rowIndex={rowIndex}
-        onRowClick={onRowClick} />;
+        const isRowSelected = selectedRowIndex === rowIndex;
+        return (
+          <>
+            <TableRow 
+              key={rowIndex} 
+              row={row}  
+              rowIndex={rowIndex}
+              onRowClick={() => onRowClick(row, rowIndex)}
+            />
+            {isRowSelected && (
+              <tr>
+                <td colSpan="100%">
+                  <Chart chartData={chartData} />
+                </td>
+              </tr>
+            )}
+          </>
+        );
       })}
     </tbody>
   </table>

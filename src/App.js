@@ -6,17 +6,32 @@ import { useTable } from "react-table";
 import Table from "./components/Table";
 import columnsConfig from "./data/columns";
 import fakeData from "./data/data.json";
-import Chart from "./highcharts/Chart";
-
 
 function App() {
   const data = React.useMemo(() => fakeData, []);
   const columns = React.useMemo(() => columnsConfig, []);
   const [selectedRowData, setSelectedRowData] = useState(null);
+  const [selectedRowIndex, setSelectedRowIndex] = useState(null);
 
-  const handleRowClick = (row) => {
-    setSelectedRowData(transformChartData(row.original));
+  const handleRowClick = (row, rowIndex) => {
+    const chartData = transformChartData(row.original);
+    setSelectedRowData(chartData);
+    setSelectedRowIndex(rowIndex);
   };
+
+  const handleClickOutside = (event) => {
+    if (!event.target.closest('.clickable-row')) {
+      setSelectedRowData(null);
+      setSelectedRowIndex(null);
+    }
+  };
+
+  React.useEffect(() => {
+    document.addEventListener('click', handleClickOutside, true);
+    return () => {
+      document.removeEventListener('click', handleClickOutside, true);
+    };
+  }, []);
 
   const { getTableProps, headerGroups, rows, prepareRow } = useTable({
     columns,
@@ -40,8 +55,9 @@ function App() {
           rows={rows}
           prepareRow={prepareRow}
           onRowClick={handleRowClick}
+          selectedRowIndex={selectedRowIndex}
+          chartData={selectedRowData}
         />
-        {selectedRowData && <Chart chartData={selectedRowData} />}
       </div>
     </div>
   );
