@@ -1,10 +1,12 @@
+import getCellClass from "../components/getCellClass";
+
 const columnsConfig = [
   {
     Header: "Показатель",
     accessor: "index",
   },
   {
-    Header: "Текущий день",
+    Header: ({ column }) => <div className={getCellClass(column)}>Текущий день</div>,
     accessor: "This_day",
   },
   {

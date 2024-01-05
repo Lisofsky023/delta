@@ -9,21 +9,25 @@ body {
 }
 .container {
   position: absolute;
-  top: 50%;
+  top: 0;
   left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
 }
 table {
   width: 800px;
-  height: 800px;
-  border-collapse: collapse;
+  height: auto;
+  border-collapse: separate;
+  border-spacing: 6px;
   overflow: hidden;
   /* box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); */
 }
 th,
 td {
   padding: 15px;
+  cursor: pointer;
+  border-radius: 10px;
+  color: rgba(0, 0, 0, 0.527);
   /* background-color: rgba(255, 255, 255, 0.2); */
   /* color: #fff; */
 }
@@ -46,6 +50,17 @@ tbody td:hover:before {
   right: 0;
   top: -9999px;
   bottom: -9999px;
-  /* background-color: rgba(255, 255, 255, 0.2); */
   z-index: -1;
+}
+
+.header {
+  background-color: rgba(87, 86, 85, 0.075);
+}
+
+.index-cell {
+  background-color: rgba(87, 86, 85, 0.075);
+}
+
+.this-day-cell {
+  background-color: rgba(192, 231, 236, 0.466);
 }

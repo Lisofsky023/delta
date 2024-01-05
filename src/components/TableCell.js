@@ -1,7 +1,14 @@
 import React from "react";
+import getCellClass from './getCellClass';
 
-const TableCell = ({ cell }) => (
-  <td {...cell.getCellProps()}> {cell.render("Cell")} </td>
-);
+const TableCell = ({ cell }) => {
+  const cellClass = getCellClass(cell);
+
+  return (
+    <td {...cell.getCellProps({ className: cellClass })}>
+      {cell.render("Cell")}
+    </td>
+  );
+};
 
 export default TableCell;
