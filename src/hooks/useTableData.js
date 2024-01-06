@@ -11,12 +11,9 @@ const useTableData = () => {
   const [selectedRowIndex, setSelectedRowIndex] = useState(null);
 
   const handleRowClick = (row, rowIndex) => {
-    // Проверка, является ли клик повторным по той же строке
     if (selectedRowIndex === rowIndex) {
-      // Сброс выбора, если кликнули по той же строке
       resetSelection();
     } else {
-      // Установка выбранных данных и индекса, если кликнули по другой строке
       const chartData = transformChartData(row.original);
       setSelectedRowData(chartData);
       setSelectedRowIndex(rowIndex);
@@ -32,7 +29,7 @@ const useTableData = () => {
     return [
       parseInt(rowData.This_day.replace(/\s/g, ''), 10),
       parseInt(rowData.yesterday.replace(/\s/g, ''), 10),
-      parseInt(rowData.this_day_of_the_week.replace(/\s/g, ''), 10),
+      parseInt(rowData.sameDayLastWeek.replace(/\s/g, ''), 10),
     ];
   };
 

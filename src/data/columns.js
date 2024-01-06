@@ -15,9 +15,9 @@ const columnsConfig = [
     Header: "Вчера",
     accessor: "yesterday",
     Cell: ({ cell, row }) => {
-      const pseudoColumnForPercentage = { column: { id: "yesterday_percent" }, row: row.original };
+      const pseudoColumnForPercentage = { column: { id: "yesterdayPercent" }, row: row.original };
       const percentageClass = getCellClass(pseudoColumnForPercentage, row.original);
-      const percentageValue = row.original.yesterday_percent !== undefined ? row.original.yesterday_percent : 0;
+      const percentageValue = row.original.yesterdayPercent !== undefined ? row.original.yesterdayPercent : 0;
       
       return (
         <>
@@ -28,7 +28,7 @@ const columnsConfig = [
   },
   {
     Header: "Этот день недели",
-    accessor: "this_day_of_the_week",
+    accessor: "sameDayLastWeek",
   },
 ];
 
