@@ -11,9 +11,16 @@ const useTableData = () => {
   const [selectedRowIndex, setSelectedRowIndex] = useState(null);
 
   const handleRowClick = (row, rowIndex) => {
-    const chartData = transformChartData(row.original);
-    setSelectedRowData(chartData);
-    setSelectedRowIndex(rowIndex);
+    // Проверка, является ли клик повторным по той же строке
+    if (selectedRowIndex === rowIndex) {
+      // Сброс выбора, если кликнули по той же строке
+      resetSelection();
+    } else {
+      // Установка выбранных данных и индекса, если кликнули по другой строке
+      const chartData = transformChartData(row.original);
+      setSelectedRowData(chartData);
+      setSelectedRowIndex(rowIndex);
+    }
   };
 
   const resetSelection = () => {
