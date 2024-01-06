@@ -1,12 +1,15 @@
 import Table from "./components/Table";
+import { TableProvider } from "./context/TableContext";
 import "./App.css";
 
 function App() {
 
   return (
-    <div className="App">
-      <Table />
-    </div>
+    <TableProvider>
+      <div className="App">
+        <Table />
+      </div>
+    </TableProvider>
   );
 }
 

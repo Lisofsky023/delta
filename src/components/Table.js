@@ -2,21 +2,21 @@ import React, { useRef } from "react";
 import TableHeader from "./TableHeader";
 import TableRow from "./TableRow";
 import Chart from "../highcharts/Chart";
-import useTableData from "../hooks/useTableData";
+import { useTableContext } from "../context/TableContext";
 import useOutsideClickHandler from "../hooks/useOutsideClickHandler";
 
 const Table = () => {
   const containerRef = useRef();
-  const {
-    getTableProps,
-    headerGroups,
-    rows,
-    prepareRow,
-    selectedRowData,
-    selectedRowIndex,
-    handleRowClick,
+  const { 
+    getTableProps, 
+    headerGroups, 
+    rows, 
+    prepareRow, 
+    selectedRowData, 
+    selectedRowIndex, 
+    handleRowClick, 
     resetSelection,
-  } = useTableData();
+  } = useTableContext();
 
   useOutsideClickHandler(containerRef, resetSelection);
 
