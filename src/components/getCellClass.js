@@ -6,12 +6,10 @@ const getCellClass = (columnOrCell, rowData) => {
 
   if (id === "yesterday_percent") {
     const percent = rowData.yesterday_percent;
-    if (percent > 0) {
+    if (percent >= 0) {
       return "green-text";
-    } else if (percent < 0) {
-      return "red-text";
     } else {
-      return "gray-text";
+      return "red-text";
     }
   }
 
