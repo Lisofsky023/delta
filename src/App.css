@@ -20,26 +20,17 @@ table {
   border-collapse: separate;
   border-spacing: 6px;
   overflow: hidden;
-  /* box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); */
 }
 th,
 td {
   padding: 15px;
   cursor: pointer;
-  border-radius: 10px;
   color: rgba(0, 0, 0, 0.527);
-  /* background-color: rgba(255, 255, 255, 0.2); */
-  /* color: #fff; */
 }
 th {
   text-align: left;
 }
-thead th {
-  /* background-color: #55608f; */
-}
-tbody tr:hover {
-  /* background-color: rgba(255, 255, 255, 0.3); */
-}
+
 tbody td {
   position: relative;
 }
@@ -57,10 +48,38 @@ tbody td:hover:before {
   background-color: rgba(87, 86, 85, 0.075);
 }
 
+.header th:nth-child(2) {
+  background-color: rgba(192, 231, 236, 0.466);
+}
+
 .index-cell {
   background-color: rgba(87, 86, 85, 0.075);
 }
 
 .this-day-cell {
   background-color: rgba(192, 231, 236, 0.466);
+}
+
+.green-cell {
+  background-color: rgba(137, 202, 154, 0.466);
+}
+
+.red-cell {
+  background-color: rgba(202, 137, 137, 0.466);
+}
+
+.gray-cell {
+  background-color: rgba(87, 86, 85, 0.075);
+}
+
+.green-text {
+  color: green;
+}
+
+.red-text {
+  color: red;
+}
+
+.gray-text {
+  color: gray;
 }

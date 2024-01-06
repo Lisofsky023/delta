@@ -8,9 +8,8 @@ const TableRow = ({ row, rowIndex, onRowClick }) => (
     onClick={() => onRowClick(row)} 
   {...row.getRowProps()}>
     {row.cells.map((cell) => (
-      <TableCell key={cell.column.id} cell={cell} />
+      <TableCell key={cell.column.id} cell={cell} row={row} />
     ))}
   </tr>
 );
-
 export default TableRow;
