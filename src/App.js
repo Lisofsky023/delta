@@ -1,6 +1,7 @@
 import Table from "./components/Table";
 import useTableData from "./hooks/useTableData";
-import React, {useEffect} from "react";
+import React, { useRef } from "react";
+import useOutsideClickHandler from "./hooks/useOutsideClickHandler";
 
 import "./App.css";
 
@@ -17,27 +18,14 @@ function App() {
     resetSelection,
   } = useTableData();
 
-  useEffect(() => {
-    const handleClickOutside = (event) => {
-    const tableElement = document.querySelector('.container');
+  const containerRef = useRef();
 
-
-    if (tableElement && !tableElement.contains(event.target)) {
-        resetSelection();
-      }
-    };
-
-  document.addEventListener('mousedown', handleClickOutside);
-    return () => {
-      document.removeEventListener('mousedown', handleClickOutside);
-    };
-  }, [resetSelection]);
+  useOutsideClickHandler(containerRef, resetSelection);
 
   return (
     <div className="App">
-      <div className="container">
+      <div className="container" ref={containerRef}>
       <Table
-        // className="table"
         getTableProps={getTableProps}
         headerGroups={headerGroups}
         rows={rows}
