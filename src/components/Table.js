@@ -21,7 +21,7 @@ const Table = () => {
   useOutsideClickHandler(containerRef, resetSelection);
 
   return (
-    <div className="container" ref={containerRef}>
+    <div className="container chart" ref={containerRef}>
       <table {...getTableProps()}>
         <thead>
           {headerGroups.map((headerGroup, index) => (
@@ -40,8 +40,8 @@ const Table = () => {
                   onRowClick={() => handleRowClick(row, rowIndex)}
                 />
                 {isRowSelected && (
-                  <tr>
-                    <td colSpan="100%">
+                  <tr className="chart">
+                    <td colSpan="100%" >
                       <Chart chartData={selectedRowData} />
                     </td>
                   </tr>

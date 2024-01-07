@@ -83,3 +83,15 @@ tbody td:hover:before {
 .gray-text {
   color: gray;
 }
+
+/* animation */
+
+.chart {
+  animation: fadeIn 0.7s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
