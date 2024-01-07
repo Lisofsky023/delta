@@ -1,5 +1,4 @@
 
-Необходимая версия Node-js v20.6.1
 # Таблица с графиком отображения данных
 
 ## Начало работы
@@ -20,15 +19,15 @@ node --version
 
 1. Клонируйте репозиторий на ваш локальный компьютер:
 
-git clone https://github.com/your-username/your-project-name.git
+git clone https://github.com/Lisofsky023/delta.git
 
 2. Перейдите в каталог проекта:
 
-cd your-project-name
+cd delta
 
 3. Установите зависимости проекта:
 
-npm install
+npm i
 
 4. Запустите приложение в режиме разработки:
 
