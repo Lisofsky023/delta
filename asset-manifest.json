@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/Lisofsky023/delta/static/css/main.509ac098.css",
-    "main.js": "/Lisofsky023/delta/static/js/main.67f901c3.js",
-    "static/js/787.de1f525d.chunk.js": "/Lisofsky023/delta/static/js/787.de1f525d.chunk.js",
-    "index.html": "/Lisofsky023/delta/index.html",
-    "main.509ac098.css.map": "/Lisofsky023/delta/static/css/main.509ac098.css.map",
-    "main.67f901c3.js.map": "/Lisofsky023/delta/static/js/main.67f901c3.js.map",
-    "787.de1f525d.chunk.js.map": "/Lisofsky023/delta/static/js/787.de1f525d.chunk.js.map"
+    "main.css": "/delta/static/css/main.509ac098.css",
+    "main.js": "/delta/static/js/main.f0aab9d2.js",
+    "static/js/787.de1f525d.chunk.js": "/delta/static/js/787.de1f525d.chunk.js",
+    "index.html": "/delta/index.html",
+    "main.509ac098.css.map": "/delta/static/css/main.509ac098.css.map",
+    "main.f0aab9d2.js.map": "/delta/static/js/main.f0aab9d2.js.map",
+    "787.de1f525d.chunk.js.map": "/delta/static/js/787.de1f525d.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.509ac098.css",
-    "static/js/main.67f901c3.js"
+    "static/js/main.f0aab9d2.js"
   ]
 }
